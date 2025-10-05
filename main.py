@@ -32,4 +32,13 @@ while True:
     player_y+=5
     pygame.time.delay(50)
 
+    if player_y>600:
+        font=pygame.font.SysFont("Times New Roman",80)
+        text=font.render("Game Over",True,(0,0,0))
+        screen.fill("green")
+        screen.blit(text,(130,150))
+        pygame.display.flip()
+        pygame.time.delay(5000)
+        break
+
 pygame.quit()
